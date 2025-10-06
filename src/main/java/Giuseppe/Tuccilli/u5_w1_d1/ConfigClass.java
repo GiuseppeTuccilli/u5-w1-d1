@@ -1,6 +1,7 @@
 package Giuseppe.Tuccilli.u5_w1_d1;
 
 import Classes.Drink;
+import Classes.Menu;
 import Classes.Pizza;
 import Classes.Topping;
 import org.springframework.context.annotation.Bean;
@@ -113,6 +114,21 @@ public class ConfigClass {
     @Bean(name = "wine")
     public Drink getWine() {
         return new Drink("wine", 607, 7.49);
+    }
+
+    @Bean(name = "menu")
+    public Menu getMenu() {
+        ArrayList<Pizza> pizzas = new ArrayList<>();
+        ArrayList<Drink> drinks = new ArrayList<>();
+        pizzas.add(getMargherita());
+        pizzas.add(getHawaiian());
+        pizzas.add(getSalami());
+        drinks.add(getLemonade());
+        drinks.add(getWater());
+        drinks.add(getWine());
+        Menu menu = new Menu(pizzas, drinks);
+        return menu;
+
     }
 
 
