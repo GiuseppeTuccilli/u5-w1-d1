@@ -15,7 +15,9 @@ public class U5W1D1Application {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(U5W1D1Application.class);
 
         Pizza margherita = ctx.getBean("margherita", Pizza.class);
-        System.out.println(margherita);
+        Pizza hawaiian = ctx.getBean("hawaiian", Pizza.class);
+        Pizza salami = ctx.getBean("salami", Pizza.class);
+
 
     }
 
